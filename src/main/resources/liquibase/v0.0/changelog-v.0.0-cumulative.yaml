@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - include:
+      file: liquibase/v0.0/ddl/2024-10-03--01-create-users-table.sql
+  - include:
+      file: liquibase/v0.0/ddl/2024-10-03--02-create-channels-table.sql
+  - include:
+      file: liquibase/v0.0/ddl/2024-10-03--03-create-subscribers-table.sql
+  - include:
+      file: liquibase/v0.0/dml/2024-10-03--01-insert-users-table.sql
+  - include:
+      file: liquibase/v0.0/dml/2024-10-03--02-insert-channels-table.sql
+  - include:
+      file: liquibase/v0.0/dml/2024-10-03--03-insert-subscribers-table.sql
