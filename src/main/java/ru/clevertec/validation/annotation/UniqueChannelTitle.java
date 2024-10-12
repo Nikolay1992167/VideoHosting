@@ -14,6 +14,8 @@ import java.lang.annotation.Target;
 @Constraint(validatedBy = ChannelValidator.class)
 public @interface UniqueChannelTitle {
 
+    String message() default "Channel title must be unique!";
+
     Class<?>[] groups() default {};
 
     Class<? extends Payload>[] payload() default {};
