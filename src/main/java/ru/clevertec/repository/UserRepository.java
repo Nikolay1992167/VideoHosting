@@ -10,4 +10,8 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     @EntityGraph(attributePaths = {"subscriptions.channel"})
     Optional<User> findWithSubscriptionsChannelById(Long id);
+
+    Optional<User> findByNickname(String nickname);
+
+    Optional<User> findByEmail(String email);
 }

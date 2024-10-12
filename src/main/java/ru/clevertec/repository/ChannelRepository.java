@@ -34,6 +34,8 @@ public interface ChannelRepository extends JpaRepository<Channel, Long> {
     @EntityGraph(attributePaths = {"author"})
     Optional<Channel> findWithAuthorById(Long id);
 
+    Boolean existsByTitle(String title);
+
     @EntityGraph(attributePaths = {"author", "subscribers"})
     Optional<Channel> findWithAuthorAndSubscriptionsById(Long id);
 
